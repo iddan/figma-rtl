@@ -1,5 +1,4 @@
 const { React } = figmaPlus;
-import "./styles.scss";
 
 /** Copy of from https://github.com/figma-plus/figma-plus/blob/gh-pages/src/api/scene.js#L72
  * with support for multiline text
@@ -87,7 +86,7 @@ const TextEditor = () => {
       setError(undefined);
       const selectedTextBox = getSelectedTextBoxWithUI();
       if (selectedTextBox) {
-        setText(flipText(selectedTextBox.characters));
+        setText(selectedTextBox.characters);
       }
     },
     [setText, setError]
@@ -104,28 +103,51 @@ const TextEditor = () => {
     [text, setError]
   );
 
-  return (
-    <div className="figma-rtl">
-      <textarea dir="rtl" onChange={handleChange} value={text} rows={8} />
-      <div className="actions">
-        <span>{error}</span>
-        <button onClick={load}>Load</button>
-        <button className="primary" onClick={update}>
-          Update
-        </button>
-      </div>
-    </div>
-  );
+  return React.createElement("div", {}, [
+    React.createElement("textarea", {
+      dir: "rtl",
+      onChange: handleChange,
+      value: text,
+      rows: 8,
+      style: {
+        width: "100%",
+        height: "auto",
+        textAlign: "right",
+        padding: 8,
+        border: "#E5E5E5 1px solid",
+        marginBottom: 16,
+        resize: "none"
+      }
+    }),
+    React.createElement(
+      "div",
+      { style: { display: "flex", justifyContent: "flex-end" } },
+      [
+        React.createElement("span", { style: { color: "red" } }, error),
+        React.createElement(
+          "button",
+          { onClick: load, style: { marginLeft: 8 } },
+          "Load"
+        ),
+        React.createElement(
+          "button",
+          { onClick: update, className: "primary", style: { marginLeft: 8 } },
+          "Update"
+        )
+      ]
+    )
+  ]);
 };
 
 figmaPlus.addCommand({
   label: "RTL Editor",
   action: () => {
     figmaPlus.showUI({
-      title: "RTL Text",
-      reactComponent: TextEditor
+      title: "RTL Editor",
+      reactComponent: TextEditor,
+      positionX: 0,
+      positionY: 0
     });
   },
-  condition: isTextBoxSelected,
-  showInSelectionMenu: true
+  condition: isTextBoxSelected
 });

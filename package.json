@@ -1,14 +1,13 @@
 {
-  "name": "figma-ui-plugin-boilerplate",
+  "name": "figma-rtl",
   "version": "0.0.2",
-  "description": "An example plugin for Figma that utlize Figma Plugin Manager API.",
-  "repository": "https://github.com/figma-plus/ui-plugin-boilerplate",
-  "author": "Ahmad Al Haddad <haddad@ah.sa>",
+  "description": "Figma Plugin for editing RTL content",
+  "repository": "https://github.com/iddan/figma-rtl",
+  "author": "Iddan Aaronsohn <mail@aniddan.com>",
   "license": "MIT",
   "main": "src/index.js",
   "dependencies": {
-    "@babel/runtime": "^7.3.1",
-    "vhtml": "^2.1.0"
+    "@babel/runtime": "^7.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -50,7 +49,6 @@
     "build": "rollup -c",
     "prebuild": "prettier --write src/**",
     "serve": "rollup -cwm",
-    "start": "rollup -cwm  --environment RUN",
     "test": "jest --config jest.config.js"
   },
   "files": [

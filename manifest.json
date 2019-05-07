@@ -1,12 +1,10 @@
 {
-	"name": "Alert File Name",
-	"id": "figma-ui-plugin-boilerplate",
-	"version": "0.0.2",
-	"author": "Ahmad Al Haddad",
-	"github": "https://github.com/figma-plus/ui-plugin-boilerplate",
-  "description": "An example plugin for Figma that utlize Figma Plugin Manager API.",
-	"instructions": "1. Browse Plugins menu 2. Click 'Alert File Name'",
-	"js": [
-		"dist/figma-ui-plugin-boilerplate.js"
-  ]
+  "name": "Figma RTL",
+  "id": "figma-rtl",
+  "version": "0.0.2",
+  "author": "Iddan Aaronsohn",
+  "github": "https://github.com/iddan/figma-rtl",
+  "description": "Figma Plugin for editing RTL content",
+  "instructions": "1. Browse Plugins menu 2. Click 'RTL Text'",
+  "js": ["dist/figma-rtl.js"]
 }

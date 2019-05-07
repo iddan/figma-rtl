@@ -1,0 +1,22 @@
+.figma-rtl textarea {
+  width: 100%;
+  height: auto !important;
+  text-align: right;
+  padding: 8px;
+  border: #e5e5e5 1px solid !important;
+  margin-bottom: 8px;
+  resize: none;
+}
+
+.figma-rtl .actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.figma-rtl .actions span {
+  color: red;
+}
+
+.figma-rtl .actions button {
+  margin-left: 8px;
+}
