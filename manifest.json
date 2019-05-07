@@ -6,5 +6,6 @@
   "github": "https://github.com/iddan/figma-rtl",
   "description": "Figma Plugin for editing RTL content",
   "instructions": "1. Browse Plugins menu 2. Click 'RTL Text'",
-  "js": ["dist/figma-rtl.js"]
+  "js": ["dist/figma-rtl.js"],
+  "css": ["dist/figma-rtl.css"]
 }
