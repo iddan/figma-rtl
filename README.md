@@ -4,6 +4,8 @@
 
 <hr/>
 
+<img src="https://raw.githubusercontent.com/iddan/figma-rtl/603120416a31b6d8a7cc577333d1aa00f7df2122/screenshot.png" />
+
 <h3> Usage </h3>
 
 - Install [Figma Plus](figmaplus.com)
